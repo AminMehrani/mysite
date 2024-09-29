@@ -783,11 +783,11 @@ a.icon-up-bg:hover {color: #212121;}
     @media screen and (max-width: 465px) {
 
         .img-list li {
-            width: 100vh !important;
+            width: 33% !important;
         }
 
         .section-certificates {
-            max-width: 400px;
+
         }
 
       }
