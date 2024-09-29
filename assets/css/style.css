@@ -778,3 +778,12 @@ a.icon-up-bg:hover {color: #212121;}
     opacity: .35;
     transform: scale(1);
     }
+
+
+    @media screen and (min-width: 768px) {
+
+        .img-list li {
+            width: 100% !important;
+        }
+
+      }
