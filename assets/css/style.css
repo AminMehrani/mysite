@@ -846,12 +846,19 @@ a.icon-up-bg:hover {color: #212121;}
     #remoteid {
         width: 100% !important;
     }
+
+    .remote {
+        padding: 25px !important;
+    }
+
+    .remote2 {
+        padding: 25px !important;
+    }
   }
 
 
 
 .remote2 {
-    padding: 20px;
     background: #efefef;
     border-radius: 5px;
     color: #212121;
@@ -862,6 +869,6 @@ a.icon-up-bg:hover {color: #212121;}
     margin-bottom: 20px;
     border-radius: 6px;
     font-size: 1em;
-    margin: 0px 20px 20px 20px;
+    margin: 0px 20px 20px 0px;
     text-align: left !important;
 }
