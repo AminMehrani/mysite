@@ -872,3 +872,22 @@ a.icon-up-bg:hover {color: #212121;}
     margin: 0px 20px 20px 0px;
     text-align: left !important;
 }
+
+.myskills {
+    display: flex;
+}
+
+.myskills > p {
+    font-size: 0.8em;
+    border: #000000 solid 1px;
+    margin-right: 4px;
+    padding: 6px;
+}
+
+@media screen and (max-width: 465px) {
+
+    .myskills {
+        display: none;
+    }
+
+  }
