@@ -931,15 +931,13 @@ section.cologo {
 
   .formcarry-container {
     box-sizing: border-box;
-    margin: 40px auto 0 auto;
-    padding: 0;
-
+    margin: 10px auto 0 auto;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.01em;
 
-    width: 400px;
+
 
     /* NORMAL */
     --fc-border-color: #ECEFF9;
@@ -1098,4 +1096,7 @@ section.cologo {
     color: hsl(var(--fc-error-hsl)); 
     border-color: hsl(var(--fc-error-hsl));
     box-shadow: 0px 0px 0px 3px hsla(var(--fc-error-hsl), 12%);
+  }
+
+  #con {
   }
