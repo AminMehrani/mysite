@@ -89,6 +89,3 @@ $(function() {
     });
     
 });
-
-
-$('.imageGallery1 a').simpleLightbox();
