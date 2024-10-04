@@ -682,19 +682,29 @@ a.icon-up-bg:hover {color: #212121;}
     padding-top: 10px;
 }
 
-.cologo {
+section.cologo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: nowrap;
 }
 
 .logos {
     display: flex;
-    align-items: flex-end;
-    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.cologo {
+    padding: 15px;
 }
 
 .cologo img {
-    width: 50%;
+    width: 40%;
+}
+
+.innerlogo {
+    display: flex;
 }
 
 .center {
