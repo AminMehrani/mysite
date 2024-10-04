@@ -657,7 +657,7 @@ a.icon-up-bg:hover {color: #212121;}
   }
   .timeline-middle {
     position: relative;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    background-image: linear-gradient(45deg, #b1b2df, #646464, #465a9b);
     width: 3px;
     height: 100%;
   }
@@ -671,14 +671,31 @@ a.icon-up-bg:hover {color: #212121;}
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    background-image: linear-gradient(45deg, #b1b2df, #646464, #465a9b);
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
 }
 
+.exp {
+    border-top:#000 1px solid;
+    padding-top: 10px;
+}
 
+.cologo {
+    display: flex;
+    align-items: center;
+}
 
+.logos {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.cologo img {
+    width: 50%;
+}
 
 .center {
     display: table;

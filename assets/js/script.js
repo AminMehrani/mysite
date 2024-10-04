@@ -60,12 +60,14 @@ $(function() {
 	// another custom callback for counting to infinity
 	$('#infinity').data('countToOptions', {
 		onComplete: function (value) {
-		  count.call(this, {
+            setTimeout(function() {
+            count.call($('#infinity'), {
 		    from: value,
 		    to: value + 1
-		  });
-		}
-	});
+            });
+        }, 400000); // 10 minutes in milliseconds
+    }
+    });
 
 	$('#infinity').each(count);
 
