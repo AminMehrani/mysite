@@ -226,6 +226,7 @@ html, body {
 
 .payment-section > ul > li {
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 .payment-btn {
@@ -244,6 +245,9 @@ html, body {
   background-color: #14a800;
   position: relative; /* Add this */
   z-index: 1;         /* Add this to ensure content stays above the shiny line */
+}
+.payment-section > ul > li:first-child {
+  border-bottom: #444 1px solid;
 }
 
 #remotecom {
