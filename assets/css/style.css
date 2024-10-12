@@ -887,7 +887,12 @@ section.cologo {
     opacity: 1;
   }
 
-
+  .payment-section {
+    border-radius: 10px;
+    padding: 15px;
+    -webkit-box-shadow: 5px 5px 10px #ffffff, -5px -5px 10px #cfcfcf;
+    box-shadow: 5px 5px 10px #ffffff, -5px -5px 10px #cfcfcf;
+  }
 
   .img-list {
     list-style: none;
@@ -1053,6 +1058,8 @@ section.cologo {
     }
 
     .payment-section {
+      -webkit-box-shadow: 5px 5px 10px #ffffff, -5px -5px 10px #cfcfcf;
+      box-shadow: 5px 5px 10px #ffffff, -5px -5px 10px #cfcfcf;
       margin: 10px;
       display: flex;
       width: 90%;
