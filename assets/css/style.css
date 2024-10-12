@@ -193,6 +193,99 @@ html, body {
     padding-bottom: 2px;
 }
 
+.payment {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.paylogo {
+
+  position: relative;
+  width: 100%;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+#remotelogo {
+  width: 100px;
+  height: auto;
+}
+
+.payment-section {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+}
+
+.payment-section > ul {
+
+  text-align: start;
+
+}
+
+.payment-section > ul > li {
+  padding: 10px;
+}
+
+.payment-btn {
+  border-radius: 20px;
+  padding: 15px;
+  width: 50%;
+  justify-items: center;
+  border: none;
+  box-shadow: 5px 5px 10px #ffffff, -5px -5px 10px #cfcfcf;
+  position: relative; /* Add this */
+  overflow: hidden;   /* Add this */
+}
+
+#upwork {
+  color: #ffffff;
+  background-color: #14a800;
+  position: relative; /* Add this */
+  z-index: 1;         /* Add this to ensure content stays above the shiny line */
+}
+
+#remotecom {
+  color: #ffffff;
+  background-color: #851663;
+  position: relative; /* Add this */
+  z-index: 1;   
+}
+
+.payment-btn-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-con {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Shiny border effect */
+.payment-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px; /* Match the button border-radius */
+  border: 2px solid #ffffff; /* Green shiny border */
+  box-shadow: 0 0 5px rgba(29, 191, 115, 0.5), 0 0 15px rgba(29, 191, 115, 0.5); /* Green glow */
+  z-index: 0; /* Behind the button content */
+  transition: all 0.5s ease;
+  clip-path: inset(0% 100% 0% 0%);
+}
+
+.payment-btn:hover::before {
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+
 /* Navigation */
 .navbar-nav > li > a {
     padding: 5px 0;
