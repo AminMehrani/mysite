@@ -89,3 +89,21 @@ $(function() {
     });
     
 });
+
+<script>
+function runAI() {
+    const input = document.getElementById("aiInput").value;
+    const output = document.getElementById("aiOutput");
+
+    if (!input.trim()) {
+        output.innerHTML = "No input provided.";
+        return;
+    }
+
+    // Placeholder logic (connect n8n / OpenAI webhook later)
+    output.innerHTML =
+        "Processing request...<br>" +
+        "Input: " + input.substring(0, 120) + "<br><br>" +
+        "Status: Routed to AI triage layer (mock response)";
+}
+</script>
