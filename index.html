@@ -525,5 +525,42 @@
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/script.js"></script>
 
+<!-- SCRIPT -->
+<script>
+async function sendTicket() {
+    const input = document.getElementById("ticketInput").value;
+    const loading = document.getElementById("loading");
+    const output = document.getElementById("resultBox");
+
+    if (!input) {
+        output.innerText = "Enter a support ticket first.";
+        return;
+    }
+
+    loading.style.display = "block";
+    output.innerText = "";
+
+    try {
+        const res = await fetch("https://ameenpeem.app.n8n.cloud/webhook-test/2fc107f8-54e4-497c-8ba3-e495def03fdd", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                message: input
+            })
+        });
+
+        const data = await res.json();
+        output.innerText = JSON.stringify(data, null, 2);
+
+    } catch (err) {
+        output.innerText = "System error connecting to triage engine.";
+    }
+
+    loading.style.display = "none";
+}
+</script>
+
 </body>
 </html>
