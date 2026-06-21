@@ -7,59 +7,28 @@
 
     <title>Amin Mehrani</title>
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav.png">
-
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
 
 <header id="masthead" class="site-header">
-    <nav id="primary-navigation" class="site-navigation">
+    <nav class="site-navigation">
         <div class="container">
-            <div class="navbar-header page-scroll">
-
-                <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <a href="#hero" class="site-logo"><img src="assets/img/logoamin.png" alt="logo"></a>
-
-            </div>
-
-            <div class="main-menu" id="portfolio-perfect-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#portfolio">CV</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <a href="#hero" class="site-logo">
+                <img src="assets/img/logoamin.png" alt="logo">
+            </a>
         </div>
     </nav>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div id="hero" class="hero">
     <div class="container">
         <div class="row">
@@ -70,40 +39,14 @@
 
                 <p class="job-title">Senior Product & Technical Support Engineer</p>
 
-                <section>
-                    <div class="myskills">
-                        <p>API & Webhooks</p>
-                        <p>SaaS Systems</p>
-                        <p>LEMP Stack</p>
-                        <p>WordPress</p>
-                        <p>Shopify</p>
-                        <p>PHP / JS</p>
-                    </div>
-                </section>
-
-                <!-- 🔥 AI TRIAGE WIDGET START -->
-                <section style="margin-top:20px;padding:15px;border:1px solid rgba(0,0,0,0.15);border-radius:10px;background:#fafafa;">
-
-                    <h4 style="margin-bottom:10px;">AI Support Triage Engine (Live Demo)</h4>
-
-                    <textarea id="ticketInput"
-                        style="width:100%;height:90px;padding:10px;border:1px solid #ccc;border-radius:6px;"
-                        placeholder="e.g. My API is returning 403 after update"></textarea>
-
-                    <button onclick="sendTicket()"
-                        style="margin-top:10px;padding:8px 14px;background:#111;color:#fff;border:none;border-radius:6px;cursor:pointer;">
-                        Analyze Ticket
-                    </button>
-
-                    <div id="loading" style="display:none;margin-top:8px;color:#777;">
-                        Processing...
-                    </div>
-
-                    <pre id="resultBox"
-                        style="margin-top:12px;background:#f4f4f4;padding:10px;border-radius:6px;white-space:pre-wrap;"></pre>
-
-                </section>
-                <!-- 🔥 AI TRIAGE WIDGET END -->
+                <div class="myskills">
+                    <p>API & Webhooks</p>
+                    <p>SaaS Systems</p>
+                    <p>LEMP Stack</p>
+                    <p>WordPress</p>
+                    <p>Shopify</p>
+                    <p>PHP / JS</p>
+                </div>
 
                 <a href="#contact" class="btn btn-fill">Contact me</a>
                 <a href="assets/img/AminPoorghafoor-Final2026.pdf" class="btn btn-border">Download CV</a>
@@ -111,29 +54,52 @@
             </div>
 
             <div class="col-md-6 text-right">
-                <img src="assets/img/amin-mehrani.jpg" alt="amin-mehrani">
+                <img src="assets/img/amin-mehrani.jpg" alt="profile">
             </div>
 
         </div>
     </div>
 </div>
 
-<!-- MAIN CONTENT (unchanged below, keep your sections as-is) -->
+<!-- ✅ AI TRIAGE SECTION (FIXED POSITION: BELOW HERO) -->
+<section style="max-width:900px;margin:60px auto;padding:20px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa;">
 
+    <h3 style="margin-bottom:10px;">AI Support Triage Engine (Live Demo)</h3>
+    <p style="color:#666;margin-bottom:15px;">
+        Test a real support ticket and get instant AI classification.
+    </p>
+
+    <textarea id="ticketInput"
+        style="width:100%;height:100px;padding:12px;border:1px solid #ccc;border-radius:8px;"
+        placeholder="e.g. My API returns 403 after update"></textarea>
+
+    <button onclick="sendTicket()"
+        style="margin-top:10px;padding:10px 16px;background:#111;color:#fff;border:none;border-radius:6px;cursor:pointer;">
+        Analyze Ticket
+    </button>
+
+    <div id="loading" style="display:none;margin-top:10px;color:#777;">
+        Processing...
+    </div>
+
+    <pre id="resultBox"
+        style="margin-top:15px;background:#f4f4f4;padding:12px;border-radius:8px;white-space:pre-wrap;"></pre>
+
+</section>
+
+<!-- MAIN CONTENT (keep yours unchanged) -->
 <main id="main" class="site-main">
-    <!-- your existing sections remain unchanged -->
+    <!-- Your existing sections remain here -->
 </main>
 
 <!-- FOOTER -->
-<footer id="colophon" class="site-footer">
+<footer>
     <div class="container">
-        <p class="copyright">Copyright © 2026 by Amin Mehrani.</p>
+        <p>Copyright © 2026 by Amin Mehrani.</p>
     </div>
 </footer>
 
 <!-- SCRIPT -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 <script>
 async function sendTicket() {
     const input = document.getElementById("ticketInput").value;
