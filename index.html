@@ -531,40 +531,37 @@ async function runAI() {
     const input = document.getElementById("aiInput").value;
     const output = document.getElementById("aiOutput");
 
-    if (!input || input.trim() === "") {
-        output.innerText = "Input required for triage execution.";
-        return;
-    }
+    output.innerHTML = "Processing...";
 
-    output.innerText = "Processing triage request...";
+    const res = await fetch("YOUR_N8N_WEBHOOK_URL", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            message: input
+        })
+    });
 
-    try {
-        const res = await fetch("https://ameenpeem.app.n8n.cloud/webhook-test/2fc107f8-54e4-497c-8ba3-e495def03fdd", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                message: input
-            })
-        });
+    const data = await res.json();
 
-        if (!res.ok) {
-            throw new Error("Network failure: " + res.status);
-        }
+    // DIRECT OBJECT (thanks to n8n fix)
+    const triage = data;
 
-        const data = await res.json();
-
-        // flexible output handling
-        output.innerText =
-            data.output ||
-            data.message ||
-            JSON.stringify(data, null, 2);
-
-    } catch (err) {
-        output.innerText = "Triage engine offline or webhook misconfigured.";
-        console.error(err);
-    }
+    output.innerHTML = `
+        <div style="
+            padding:12px;
+            border-radius:10px;
+            background:#0b1220;
+            border:1px solid rgba(255,255,255,0.08);
+        ">
+            <div><b>Issue Type:</b> ${triage.issue_type || "-"}</div>
+            <div><b>Sub Issue:</b> ${triage.sub_issue || "-"}</div>
+            <div><b>Request Type:</b> ${triage.request_type || "-"}</div>
+            <hr style="border:0;border-top:1px solid rgba(255,255,255,0.1);margin:10px 0;">
+            <div>${triage.description || "-"}</div>
+        </div>
+    `;
 }
 </script>
 
