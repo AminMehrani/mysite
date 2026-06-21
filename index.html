@@ -7,23 +7,60 @@
 
     <title>Amin Mehrani</title>
 
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav.png">
+
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
 
-<header id="masthead" class="site-header">
-    <nav class="site-navigation">
+<header id="masthead" class="site-header" data-anchor-target=".hero"
+    data-top="background: rgba(255,255,255,0); padding: 30px 0;"
+    data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0;">
+
+    <nav id="primary-navigation" class="site-navigation">
         <div class="container">
-            <a href="#hero" class="site-logo">
-                <img src="assets/img/logoamin.png" alt="logo">
-            </a>
+            <div class="navbar-header page-scroll">
+
+                <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="#hero" class="site-logo"><img src="assets/img/logoamin.png" alt="logo"></a>
+
+            </div>
+
+            <div class="main-menu" id="portfolio-perfect-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#portfolio">CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </div>
+
         </div>
     </nav>
 </header>
@@ -37,41 +74,51 @@
 
                 <h1>Amin P.Mehrani</h1>
 
-                <p class="job-title">Senior Product & Technical Support Engineer</p>
+                <div class="page-scroll">
+                    <p class="job-title">Senior Product & Technical Support Engineer</p>
 
-                <div class="myskills">
-                    <p>API & Webhooks</p>
-                    <p>SaaS Systems</p>
-                    <p>LEMP Stack</p>
-                    <p>WordPress</p>
-                    <p>Shopify</p>
-                    <p>PHP / JS</p>
+                    <section>
+                        <div class="myskills">
+                            <p>API & Webhooks</p>
+                            <p>SaaS Systems</p>
+                            <p>LEMP Stack</p>
+                            <p>WordPress</p>
+                            <p>Shopify</p>
+                            <p>PHP / JS</p>
+                        </div>
+                    </section>
+
+                    <a href="#contact" class="btn btn-fill">Contact me</a>
+                    <a href="assets/img/AminPoorghafoor-Final2026.pdf" class="btn btn-border">Download CV</a>
+
+                    <section class="payment">
+                        <div><a href="https://www.upwork.com/freelancers/aminp2"><img class="paylogo" src="assets/img/upwork.svg"></a></div>
+                        <div><a href="https://remote.com"><img id="remotelogo" src="assets/img/remote.png"></a></div>
+                    </section>
+
                 </div>
-
-                <a href="#contact" class="btn btn-fill">Contact me</a>
-                <a href="assets/img/AminPoorghafoor-Final2026.pdf" class="btn btn-border">Download CV</a>
-
             </div>
 
             <div class="col-md-6 text-right">
-                <img src="assets/img/amin-mehrani.jpg" alt="profile">
+                <img src="assets/img/amin-mehrani.jpg" alt="amin-mehrani">
             </div>
 
         </div>
     </div>
 </div>
 
-<!-- ✅ AI TRIAGE SECTION (FIXED POSITION: BELOW HERO) -->
-<section style="max-width:900px;margin:60px auto;padding:20px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa;">
+<!-- ✅ AI SUPPORT TRIAGE (ADDED BELOW HERO) -->
+<section style="max-width:900px;margin:60px auto;padding:25px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa;">
 
     <h3 style="margin-bottom:10px;">AI Support Triage Engine (Live Demo)</h3>
+
     <p style="color:#666;margin-bottom:15px;">
-        Test a real support ticket and get instant AI classification.
+        Submit a support ticket and receive instant AI classification + recommended response.
     </p>
 
     <textarea id="ticketInput"
-        style="width:100%;height:100px;padding:12px;border:1px solid #ccc;border-radius:8px;"
-        placeholder="e.g. My API returns 403 after update"></textarea>
+        style="width:100%;height:110px;padding:12px;border:1px solid #ccc;border-radius:8px;"
+        placeholder="Example: My API returns 403 after update"></textarea>
 
     <button onclick="sendTicket()"
         style="margin-top:10px;padding:10px 16px;background:#111;color:#fff;border:none;border-radius:6px;cursor:pointer;">
@@ -87,27 +134,30 @@
 
 </section>
 
-<!-- MAIN CONTENT (keep yours unchanged) -->
+<!-- EVERYTHING BELOW YOUR ORIGINAL SITE IS KEPT AS-IS -->
 <main id="main" class="site-main">
-    <!-- Your existing sections remain here -->
+
+    <!-- your full original sections untouched -->
+    <!-- about / skills / services / timeline / contact etc -->
+
 </main>
 
-<!-- FOOTER -->
-<footer>
+<footer id="colophon" class="site-footer">
     <div class="container">
-        <p>Copyright © 2026 by Amin Mehrani.</p>
+        <p class="copyright">Copyright © 2026 by Amin Poorghafoor.</p>
     </div>
 </footer>
 
-<!-- SCRIPT -->
+<!-- ✅ SCRIPT ADDED ONCE -->
 <script>
 async function sendTicket() {
+
     const input = document.getElementById("ticketInput").value;
     const loading = document.getElementById("loading");
     const output = document.getElementById("resultBox");
 
     if (!input) {
-        output.innerText = "Enter a support ticket first.";
+        output.innerText = "Enter a ticket first.";
         return;
     }
 
@@ -120,21 +170,23 @@ async function sendTicket() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                message: input
-            })
+            body: JSON.stringify({ message: input })
         });
 
         const data = await res.json();
         output.innerText = JSON.stringify(data, null, 2);
 
     } catch (err) {
-        output.innerText = "System error connecting to triage engine.";
+        output.innerText = "Connection error with AI system.";
     }
 
     loading.style.display = "none";
 }
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>
