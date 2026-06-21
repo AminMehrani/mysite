@@ -527,18 +527,16 @@
 
 <!-- SCRIPT -->
 <script>
-async function sendTicket() {
-    const input = document.getElementById("ticketInput").value;
-    const loading = document.getElementById("loading");
-    const output = document.getElementById("resultBox");
+async function runAI() {
+    const input = document.getElementById("aiInput").value;
+    const output = document.getElementById("aiOutput");
 
-    if (!input) {
-        output.innerText = "Enter a support ticket first.";
+    if (!input || input.trim() === "") {
+        output.innerText = "Input required for triage execution.";
         return;
     }
 
-    loading.style.display = "block";
-    output.innerText = "";
+    output.innerText = "Processing triage request...";
 
     try {
         const res = await fetch("https://ameenpeem.app.n8n.cloud/webhook-test/2fc107f8-54e4-497c-8ba3-e495def03fdd", {
@@ -551,14 +549,22 @@ async function sendTicket() {
             })
         });
 
+        if (!res.ok) {
+            throw new Error("Network failure: " + res.status);
+        }
+
         const data = await res.json();
-        output.innerText = JSON.stringify(data, null, 2);
+
+        // flexible output handling
+        output.innerText =
+            data.output ||
+            data.message ||
+            JSON.stringify(data, null, 2);
 
     } catch (err) {
-        output.innerText = "System error connecting to triage engine.";
+        output.innerText = "Triage engine offline or webhook misconfigured.";
+        console.error(err);
     }
-
-    loading.style.display = "none";
 }
 </script>
 
